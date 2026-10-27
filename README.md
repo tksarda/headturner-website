@@ -14,6 +14,7 @@ Single-page site for [Headturner](https://www.linkedin.com/in/thilaksarda/), bui
 npm install
 npm run dev      # preview at http://localhost:4321
 npm run build    # outputs the site to dist/
+npm run check    # type-checks the code; should report 0 errors
 ```
 
 Needs Node 22.23 or newer.

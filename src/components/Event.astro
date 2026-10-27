@@ -5,7 +5,7 @@ import { url } from '../lib/url';
 import event from '../data/event.json';
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const [year, month, day] = event.date.split('-').map(Number);
+const [, month, day] = event.date.split('-').map(Number);
 const monthName = months[month - 1];
 const when = `${day} ${monthName}, ${event.place}`;
 const external = /^https?:/.test(event.buttonUrl);

@@ -15,7 +15,7 @@
   /* ---------- Smooth scroll ---------- */
   let lenis = null;
   if (!reduceMotion && typeof window.Lenis !== 'undefined') {
-    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    lenis = new window.Lenis({ lerp: 0.1, smoothWheel: true });
     if (hasGsap) {
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add((time) => lenis.raf(time * 1000));
