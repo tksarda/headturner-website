@@ -1,5 +1,5 @@
 {
-  "_help": "PLACEHOLDER: fictional quotes, people, companies and AI-generated portraits for design review only. Replace all three with real testimonials (with permission) before setting show.testimonials to true in site.json.",
+  "_help": "PLACEHOLDER: fictional quotes, people, companies and AI-generated portraits for design review only. Replace all three with real testimonials (with permission) before switching the testimonials on in sections.json.",
   "heading": "What clients say",
   "items": [
     { "quote": "Cost per demo dropped 41% in three months, and sales finally recognised the names coming in.", "name": "Sofie Martens", "role": "Head of Marketing, Brightloop", "photo": "/assets/testimonial-1.jpg" },

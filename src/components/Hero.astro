@@ -1,12 +1,12 @@
 ---
 import { url } from '../lib/url';
-import site from '../data/site.json';
+import { isShown } from '../lib/sections';
 import proof from '../data/proof.json';
 import results from '../data/results.json';
 import TalkButton from './TalkButton.astro';
 
 // Proof points under the hero. The third (a result) stays hidden until it has a real number.
-const points = [...proof, ...(site.show.heroResultProofPoint ? [results.heroProofPoint] : [])];
+const points = [...proof, ...(isShown('heroResultProofPoint') ? [results.heroProofPoint] : [])];
 // 6 x 3 grid of brand marks; the 11th is the coral one ("the one people look back at")
 const marks = Array.from({ length: 18 }, (_, i) => i === 10);
 ---

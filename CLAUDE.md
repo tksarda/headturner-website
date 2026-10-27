@@ -6,11 +6,13 @@ Single-page marketing site for Headturner (Thilak Sarda, LinkedIn ads for B2B Sa
 
 - `src/pages/index.astro`: the page. Sections in reading order, one component each.
 - `src/components/`: one component per section (Hero, Plans, Faq, ...). Shared button: `TalkButton.astro`.
-- `src/data/*.json`: all editable content (text, lists, links, on/off flags). **Most requests are a change to one of these files.**
+- `src/data/*.json`: all editable content (text, lists, links). `sections.json` lists every section in page order with its on/off switch. **Most requests are a change to one of these files.**
 - `src/styles/global.css`: all styles and design tokens (`:root` at the top).
 - `src/scripts/main.js`: all interactions (smooth scroll, nav, carousel, event, card stack, tilt effects). Uses GSAP, Lenis and vanilla-tilt from CDN scripts in `index.astro`.
 - `public/assets/`: images and icons. In data files write them as `/assets/...`. In components wrap every image and internal link in `url()` from `src/lib/url.ts`, e.g. `src={url('/assets/logo-ink.svg')}`, so the site also works on a `github.io/<repo>/` preview address, not only on headturner.io.
 - `design-source/`: HTML sources for generated images (ads, pipeline report, book cover). Not published.
+
+After changing which sections are shown, run `npm run sections` and commit the updated `SECTIONS.md`.
 
 Commands: `npm install`, `npm run dev` (preview at localhost:4321), `npm run build`, `npm run check` (type check: run it after code changes and fix any errors). Every push to `main` builds and publishes the site through GitHub Actions in about two minutes.
 
@@ -21,8 +23,8 @@ Commands: `npm install`, `npm run dev` (preview at localhost:4321), `npm run bui
 | Upcoming event (date, place, text, link) | `src/data/event.json`. The date tile fills itself in, and the block hides the day after the event |
 | FAQ, plans, "is this a fit" lists, problem cards, steps | the matching file in `src/data/` |
 | Booking link for every "Let's talk" button | `bookingUrl` in `src/data/site.json` |
-| Testimonials, results, ads | `testimonials.json`, `results.json`, `ads.json`, then turn the matching flag in `site.json` to `true` |
-| Show or hide a section | `show` flags in `src/data/site.json` |
+| Testimonials, results, ads | `testimonials.json`, `results.json`, `ads.json`, then switch the matching section on in `sections.json` |
+| See what's on the page, show or hide a section | `src/data/sections.json` (the page's sections in order, each with `show: true` or `false`). Run `npm run sections` for an overview, which also updates `SECTIONS.md` |
 | Hero, About, "What I believe" copy | the component in `src/components/` |
 
 ## Design rules: do not break the style
@@ -37,7 +39,7 @@ These come from the Figma design. Follow them on every change.
 6. **Copy voice.** First person ("I"), senior, direct, human, no hype and no filler. Plain language. Never use a middle dot (·) as a separator in any visible text.
 7. **Accessibility is not optional.** Keep alt text on every image, visible focus states, keyboard access, sufficient contrast, and the `prefers-reduced-motion` behaviour. Buttons that open another site get `target="_blank"` with `rel="noopener noreferrer"` and a hidden "(opens in a new tab)" note. No dark patterns.
 8. **Responsive.** Always check desktop (1440px) and mobile (390px) after a change. No horizontal scrolling.
-9. **Don't invent content.** Never make up testimonials, results, client names, numbers or ads and show them as real. Placeholder sections stay hidden (`show` flags in `site.json`) until the real content exists.
+9. **Don't invent content.** Never make up testimonials, results, client names, numbers or ads and show them as real. Placeholder sections stay hidden (`show: false` in `sections.json`) until the real content exists.
 
 ## Before launch
 

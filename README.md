@@ -2,7 +2,7 @@
 
 Single-page site for [Headturner](https://www.linkedin.com/in/thilaksarda/), built from the Figma design with [Astro](https://astro.build) and published to GitHub Pages at headturner.io.
 
-**Status: pre-launch.** The site is set to `noindex`, and these sections are hidden until real content exists (flags in `src/data/site.json`):
+**Status: pre-launch.** The site is set to `noindex`, and these sections are hidden until real content exists (switches in `src/data/sections.json`, overview in `SECTIONS.md`):
 
 - Testimonials, results cards, ads carousel and pipeline report (placeholder content)
 - The hero's third proof point (a result)
@@ -15,6 +15,7 @@ npm install
 npm run dev      # preview at http://localhost:4321
 npm run build    # outputs the site to dist/
 npm run check    # type-checks the code; should report 0 errors
+npm run sections # prints which sections are shown or hidden, and updates SECTIONS.md
 ```
 
 Needs Node 22.23 or newer.
@@ -23,7 +24,7 @@ Needs Node 22.23 or newer.
 
 | Folder | What's in it |
 |---|---|
-| `src/data/` | All editable content: text, lists, links, and the on/off flags (`site.json`) |
+| `src/data/` | All editable content: text, lists and links. `sections.json` lists the page's sections in order, with on/off switches |
 | `src/components/` | One component per section of the page |
 | `src/styles/global.css` | All styles and design tokens |
 | `src/scripts/main.js` | All interactions |
@@ -46,7 +47,7 @@ One-time setup in the GitHub repository:
 
 ## Before launch
 
-- [ ] Replace the placeholder content and switch the matching flags on in `src/data/site.json`
+- [ ] Replace the placeholder content and switch the matching sections on in `src/data/sections.json`
 - [ ] Set `noindex` to `false` in `src/data/site.json`
 - [ ] Booking link (`bookingUrl` in `src/data/site.json`) and the meetup sign-up link (`src/data/event.json`)
 - [ ] FAQ: replace "[X weeks]" in the first answer (`src/data/faq.json`)

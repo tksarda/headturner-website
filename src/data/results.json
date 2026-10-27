@@ -1,5 +1,5 @@
 {
-  "_help": "PLACEHOLDER: dummy results for design review. Replace with real numbers before setting show.results to true in site.json.",
+  "_help": "PLACEHOLDER: dummy results for design review. Replace with real numbers before switching the results on in sections.json.",
   "heading": "What happens when LinkedIn is run properly",
   "cards": [
     { "figure": "€14", "text": "cost per ebook download for an HR tech scale-up, against a €38 industry benchmark.", "tilt": "-3.91deg" },

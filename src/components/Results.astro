@@ -1,12 +1,14 @@
 ---
 import { url } from '../lib/url';
-// Results, ads carousel and pipeline report. Each block shows only when its flag in src/data/site.json is true,
+// Results, ads carousel and pipeline report. Each part shows only when it is switched on in src/data/sections.json,
 // and the whole section disappears when all three are hidden (they hold placeholder content for now).
-import site from '../data/site.json';
+import { isShown } from '../lib/sections';
 import results from '../data/results.json';
 import ads from '../data/ads.json';
 
-const { results: showCards, ads: showAds, pipeline: showPipeline } = site.show;
+const showCards = isShown('resultsCards');
+const showAds = isShown('ads');
+const showPipeline = isShown('pipeline');
 ---
 
 {(showCards || showAds || showPipeline) && (

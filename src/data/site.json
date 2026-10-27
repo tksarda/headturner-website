@@ -1,16 +1,7 @@
 {
-  "_help": "Site-wide settings. Change values only; keep the structure.",
+  "_help": "Site-wide settings. Change values only; keep the structure. Which sections are shown lives in sections.json.",
   "siteUrl": "https://headturner.io",
   "linkedinUrl": "https://www.linkedin.com/in/thilaksarda/",
   "bookingUrl": "",
-  "noindex": true,
-  "show": {
-    "_help": "true shows a section, false hides it. Placeholder sections stay false until the content is real.",
-    "heroResultProofPoint": false,
-    "results": false,
-    "ads": false,
-    "pipeline": false,
-    "testimonials": false,
-    "playbook": false
-  }
+  "noindex": true
 }

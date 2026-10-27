@@ -1,5 +1,5 @@
 {
-  "_help": "PLACEHOLDER ads: fictional brands (source: design-source/ads.html). Replace with real, anonymised ads (576 x 720 px, 4:5) before setting show.ads to true in site.json.",
+  "_help": "PLACEHOLDER ads: fictional brands (source: design-source/ads.html). Replace with real, anonymised ads (576 x 720 px, 4:5) before switching the ads on in sections.json.",
   "items": [
     { "image": "/assets/ads/ad-01.png", "alt": "Brightloop ad: 38% faster time-to-hire" },
     { "image": "/assets/ads/ad-02.png", "alt": "Nordvault thought-leader ad: founder quote on security" },

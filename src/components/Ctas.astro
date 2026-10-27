@@ -1,12 +1,13 @@
 ---
 import { url } from '../lib/url';
 // The final call to action, plus the Playbook card that stacks over it on scroll.
-// The Playbook card shows only when show.playbook is true in src/data/site.json
+// The Playbook card shows only when it is switched on in src/data/sections.json
 // (the playbook doesn't exist yet and the sign-up form isn't connected).
 import site from '../data/site.json';
+import { isShown } from '../lib/sections';
 import TalkButton from './TalkButton.astro';
 
-const showPlaybook = site.show.playbook;
+const showPlaybook = isShown('playbook');
 // Until a booking link is set, the final button opens Thilak's LinkedIn so it never goes nowhere
 const finalHref = site.bookingUrl || site.linkedinUrl;
 ---

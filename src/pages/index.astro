@@ -1,10 +1,11 @@
 ---
-// The single-page site. Sections are in reading order; each lives in src/components/.
-// Content lives in src/data/ (text, lists, flags). Layout and styles live in src/styles/global.css.
+// The single-page site. The sections, their order and which are shown are listed in src/data/sections.json:
+// this page renders them from that list. Each section is a component in src/components/.
+// Content lives in src/data/ (text, lists, links). Layout and styles live in src/styles/global.css.
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
-import LogoStrip from '../components/LogoStrip.astro';
+import LogosClients from '../components/LogosClients.astro';
 import Problem from '../components/Problem.astro';
 import Believe from '../components/Believe.astro';
 import HowIWork from '../components/HowIWork.astro';
@@ -12,31 +13,41 @@ import Plans from '../components/Plans.astro';
 import Results from '../components/Results.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Event from '../components/Event.astro';
+import LogosTools from '../components/LogosTools.astro';
 import About from '../components/About.astro';
 import Fit from '../components/Fit.astro';
 import Ctas from '../components/Ctas.astro';
 import Faq from '../components/Faq.astro';
 import Footer from '../components/Footer.astro';
-import logos from '../data/logos.json';
+import { pageSections } from '../lib/sections';
+
+// Which component draws which section key in sections.json
+const components: Record<string, any> = {
+  hero: Hero,
+  logosClients: LogosClients,
+  problem: Problem,
+  believe: Believe,
+  howIWork: HowIWork,
+  plans: Plans,
+  results: Results,
+  testimonials: Testimonials,
+  event: Event,
+  logosTools: LogosTools,
+  about: About,
+  fit: Fit,
+  ctas: Ctas,
+  faq: Faq,
+};
+const visible = pageSections.filter((s) => s.show && components[s.key]);
 ---
 
 <Base>
   <Nav />
   <main id="main">
-    <Hero />
-    <LogoStrip title={logos.clients.title} items={logos.clients.items} ariaLabel="Companies I’ve worked with" />
-    <Problem />
-    <Believe />
-    <HowIWork />
-    <Plans />
-    <Results />
-    <Testimonials />
-    <Event />
-    <LogoStrip title={logos.tools.title} items={logos.tools.items} ariaLabel="Tools and partners I work with" reverse />
-    <About />
-    <Fit />
-    <Ctas />
-    <Faq />
+    {visible.map((s) => {
+      const Section = components[s.key];
+      return <Section />;
+    })}
   </main>
   <Footer />
 
