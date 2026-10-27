@@ -22,7 +22,7 @@ import TalkButton from './TalkButton.astro';
         </div>
         <div class="plan__list">
           <ul class="checklist">
-            {plan.items.map((item) => <li><img src={url('/assets/check.svg')} width="20" height="20" alt="" /><span><strong>{item.strong}</strong>{item.text}</span></li>)}
+            {plan.items.map((item) => <li><img src={url('/assets/check.svg')} width="20" height="20" alt="" />{item}</li>)}
           </ul>
           {plan.note && <p class="t-muted">{plan.note}</p>}
         </div>
