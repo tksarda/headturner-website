@@ -4,40 +4,14 @@
     "tagStyle": "coral",
     "icon": "/assets/icon-strategist.svg",
     "title": "You have the makers. I steer the performance.",
-    "intro": "For in-house teams that need a senior paid media partner to own the strategy, execution and optimisation, without adding another full-time hire.",
+    "intro": "For in-house teams that need a senior paid media partner, without adding another full-time hire.",
     "items": [
-      {
-        "strong": "Full-funnel paid media strategy",
-        "text": " across LinkedIn, Meta and Google, focused on reaching the right B2B buyers."
-      },
-      {
-        "strong": "ICP and audience building",
-        "text": " to define, find and target your ideal customers across platforms."
-      },
-      {
-        "strong": "Campaign setup and execution",
-        "text": " from account structure and tracking to launch and ongoing management."
-      },
-      {
-        "strong": "Continuous optimisation",
-        "text": " of audiences, budgets, bidding and campaigns to improve performance over time."
-      },
-      {
-        "strong": "Performance dashboards and reporting",
-        "text": " that turn campaign data into clear insights and actionable next steps."
-      },
-      {
-        "strong": "Creative direction and ad reviews",
-        "text": " to brief your designers and copywriters, review assets before launch and identify what to test next."
-      },
-      {
-        "strong": "Sales alignment",
-        "text": " to connect campaign performance with lead quality, pipeline and follow-up."
-      },
-      {
-        "strong": "Pipeline influence tracking",
-        "text": " with Fibbler or ZenABM, so you can show leadership what your ads really drive."
-      }
+      "Full-funnel paid media strategy across LinkedIn, Meta and Google",
+      "ICP and audience building",
+      "Campaign setup, management and optimisation",
+      "Creative direction and ad reviews for your designers and copywriters",
+      "Dashboards, reporting and alignment with sales",
+      "Pipeline influence tracking with Fibbler or ZenABM"
     ],
     "note": "Your team creates the assets. I own the paid media engine that turns them into results."
   },
@@ -46,28 +20,13 @@
     "tagStyle": "pink",
     "icon": "/assets/icon-done-for-you.svg",
     "title": "You bring the ambition. I bring the whole package.",
-    "intro": "For B2B teams that want paid media handled end-to-end, from strategy and campaign management to creative production and continuous optimisation.",
+    "intro": "For B2B teams that want their paid media handled end to end.",
     "items": [
-      {
-        "strong": "Everything in Strategist, plus:",
-        "text": ""
-      },
-      {
-        "strong": "Ad creative production:",
-        "text": " unlimited ad concepts, copy and creative variations to keep campaigns fresh and test what works."
-      },
-      {
-        "strong": "Thought leader content:",
-        "text": " LinkedIn thought leader posts that turn your founders and subject-matter experts into credible voices your buyers want to hear from."
-      },
-      {
-        "strong": "End-to-end creative execution:",
-        "text": " from messaging and hooks to ad copy, visual direction and finished campaign assets."
-      },
-      {
-        "strong": "Creative testing and iteration:",
-        "text": " continuously develop new angles, refresh creatives and scale what resonates with your audience."
-      }
+      "Everything in Strategist",
+      "Unlimited ad concepts, copy and creative variations",
+      "Thought leader posts for your founders and experts",
+      "Finished campaign assets, from hooks to visuals",
+      "Ongoing creative testing to scale what works"
     ]
   }
 ]
