@@ -4,9 +4,9 @@ import plans from '../data/plans.json';
 import TalkButton from './TalkButton.astro';
 ---
 
-<section class="section plans-section" id="pricing">
+<section class="section plans-section" id="work-with-me">
   <header class="section-header">
-    <span class="pill">PRICING</span>
+    <span class="pill">WORK WITH ME</span>
     <h2 class="display-m">Pick the level of support you need.</h2>
   </header>
   <div class="plans">
@@ -22,7 +22,7 @@ import TalkButton from './TalkButton.astro';
         </div>
         <div class="plan__list">
           <ul class="checklist">
-            {plan.items.map((item) => <li><img src={url('/assets/check.svg')} width="20" height="20" alt="" />{item}</li>)}
+            {plan.items.map((item) => <li><img src={url('/assets/check.svg')} width="20" height="20" alt="" /><span><strong>{item.strong}</strong>{item.text}</span></li>)}
           </ul>
           {plan.note && <p class="t-muted">{plan.note}</p>}
         </div>

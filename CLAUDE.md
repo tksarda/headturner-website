@@ -50,5 +50,5 @@ These come from the Figma design. Follow them on every change.
 ## Before launch
 
 - Set `noindex` to `false` in `src/data/site.json` (and ask before doing it), so search engines can find the site.
-- Replace the placeholders, then switch their flags on: testimonials, results, ads, the pipeline report, the hero result proof point, and the Playbook card (which also needs a real sign-up form and the playbook PDF).
+- Replace the placeholders, then switch their flags on: testimonials, results, ads, the pipeline report and the Playbook card (which also needs a real sign-up form and the playbook PDF).
 - Fill in the FAQ's "[X weeks]", the booking link, the meetup sign-up link, the final logo lists, and the privacy page's company details.

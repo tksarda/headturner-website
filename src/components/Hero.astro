@@ -1,12 +1,10 @@
 ---
 import { url } from '../lib/url';
-import { isShown } from '../lib/sections';
 import proof from '../data/proof.json';
-import results from '../data/results.json';
 import TalkButton from './TalkButton.astro';
 
-// Proof points under the hero. The third (a result) stays hidden until it has a real number.
-const points = [...proof, ...(isShown('heroResultProofPoint') ? [results.heroProofPoint] : [])];
+// Proof points under the hero
+const points = proof;
 // 6 x 3 grid of brand marks; the 11th is the coral one ("the one people look back at")
 const marks = Array.from({ length: 18 }, (_, i) => i === 10);
 ---
@@ -16,16 +14,16 @@ const marks = Array.from({ length: 18 }, (_, i) => i === 10);
     <div class="hero__columns">
       <div class="hero__copy">
         <div class="hero__headline-group">
-          <span class="pill pill--outline hero__eyebrow">Linkedin Ads for B2B SaaS &amp; Tech</span>
-          <h1 class="hero__title">LinkedIn ads that make the right people <span class="t-coral">know you</span> before they need you.</h1>
-          <p class="body-l t-muted">At Headturner, I help B2B SaaS and tech companies turn LinkedIn into their strongest brand channel. Your future buyers get to know you now, so when they’re ready, you’re the name they already trust.</p>
+          <span class="pill pill--outline hero__eyebrow"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M13.7336 1H2.26641C1.567 1 1 1.567 1 2.26641V13.7336C1 14.433 1.567 15 2.26641 15H13.7336C14.433 15 15 14.433 15 13.7336V2.26641C15 1.567 14.433 1 13.7336 1ZM5.33219 13.0885C5.33219 13.2921 5.1672 13.4571 4.96365 13.4571H3.39484C3.19129 13.4571 3.0263 13.2921 3.0263 13.0885V6.51215C3.0263 6.3086 3.19129 6.14361 3.39484 6.14361H4.96365C5.1672 6.14361 5.33219 6.3086 5.33219 6.51215V13.0885ZM4.17925 5.52369C3.35614 5.52369 2.68887 4.85641 2.68887 4.03331C2.68887 3.2102 3.35614 2.54293 4.17925 2.54293C5.00235 2.54293 5.66962 3.2102 5.66962 4.03331C5.66962 4.85641 5.00239 5.52369 4.17925 5.52369ZM13.5307 13.1182C13.5307 13.3053 13.379 13.4571 13.1919 13.4571H11.5084C11.3213 13.4571 11.1696 13.3053 11.1696 13.1182V10.0335C11.1696 9.57335 11.3046 8.01704 9.967 8.01704C8.9295 8.01704 8.71906 9.08229 8.6768 9.56034V13.1182C8.6768 13.3053 8.52511 13.4571 8.33794 13.4571H6.70976C6.52263 13.4571 6.37091 13.3053 6.37091 13.1182V6.48247C6.37091 6.29534 6.52263 6.14361 6.70976 6.14361H8.33794C8.52507 6.14361 8.6768 6.29534 8.6768 6.48247V7.05621C9.06151 6.47887 9.63324 6.03326 10.8505 6.03326C13.5462 6.03326 13.5307 8.55164 13.5307 9.93537V13.1182Z"/></svg>LinkedIn-focused B2B growth partner</span>
+          <h1 class="hero__title">B2B ads that turn heads and <span class="t-coral">drive pipeline</span>.</h1>
+          <p class="body-l t-muted">At Headturner, I help B2B SaaS companies grow their paid ads with LinkedIn at its core.</p>
         </div>
         <div class="founder-card">
           <div class="founder-card__avatar"><img src={url('/assets/thilak.png')} alt="Thilak, founder of Headturner" /></div>
           <div class="founder-card__content">
             <div class="founder-card__intro">
-              <p class="founder-card__name">Hi I’m Thilak,</p>
-              <p>founder of Headturner. 7 years in B2B SaaS marketing. Working with a handful of teams at a time.</p>
+              <p class="founder-card__name">Hi, I’m Thilak,</p>
+              <p>founder of Headturner. Ex-Teamleader, 7 years running paid social in-house at B2B SaaS and agencies. Working with a handful of teams at a time.</p>
             </div>
             <TalkButton label="Let’s talk" />
           </div>

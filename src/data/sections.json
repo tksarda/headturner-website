@@ -2,12 +2,11 @@
   "_help": "The page, section by section, in the order they appear. This is the one place to see what is on the site and to switch things on or off. Change only the show values (true shows, false hides). Run 'npm run sections' for an overview. Sections of type 'part' are pieces inside a section; their parent says which.",
   "items": [
     { "key": "hero", "name": "Hero", "type": "section", "show": true, "content": "src/components/Hero.astro, src/data/proof.json" },
-    { "key": "heroResultProofPoint", "name": "Hero: third proof point (a result)", "type": "part", "parent": "hero", "show": false, "placeholder": true, "content": "src/data/results.json (heroProofPoint)", "needs": "A real result with one line of context" },
     { "key": "logosClients", "name": "Logo strip: companies I've worked with", "type": "section", "show": true, "content": "src/data/logos.json (clients)", "needs": "Confirm the list and add official logo files" },
     { "key": "problem", "name": "The problem (4 cards)", "type": "section", "show": true, "content": "src/data/problems.json" },
     { "key": "believe", "name": "What I believe", "type": "section", "show": true, "content": "src/components/Believe.astro" },
     { "key": "howIWork", "name": "How I work (3 steps)", "type": "section", "show": true, "content": "src/data/steps.json" },
-    { "key": "plans", "name": "Pricing: Strategist and Done for you", "type": "section", "show": true, "content": "src/data/plans.json" },
+    { "key": "plans", "name": "Work with me: Strategist and Done for you", "type": "section", "show": true, "content": "src/data/plans.json" },
     { "key": "results", "name": "Results (cards, ads, pipeline)", "type": "section", "show": true, "content": "src/components/Results.astro", "note": "Disappears on its own when all three parts below are hidden" },
     { "key": "resultsCards", "name": "Results: 3 result cards", "type": "part", "parent": "results", "show": false, "placeholder": true, "content": "src/data/results.json (cards)", "needs": "Real results with numbers" },
     { "key": "ads", "name": "Results: ads carousel", "type": "part", "parent": "results", "show": false, "placeholder": true, "content": "src/data/ads.json", "needs": "6 to 8 real, anonymised ads (576 x 720 px)" },
