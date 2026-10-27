@@ -1,15 +1,37 @@
 {
-  "_help": "PLACEHOLDER ads: fictional brands (source: design-source/ads.html). Replace with real, anonymised ads (576 x 720 px, 4:5) before switching the ads on in sections.json.",
+  "_help": "The ads carousel. Square ads (1:1), saved at 720 x 720 px in public/assets/ads/. Each needs alt text that says what the ad shows.",
   "items": [
-    { "image": "/assets/ads/ad-01.png", "alt": "Brightloop ad: 38% faster time-to-hire" },
-    { "image": "/assets/ads/ad-02.png", "alt": "Nordvault thought-leader ad: founder quote on security" },
-    { "image": "/assets/ads/ad-03.png", "alt": "Fieldwork ad: digital site diary" },
-    { "image": "/assets/ads/ad-04.png", "alt": "Curio ad: museum ticketing" },
-    { "image": "/assets/ads/ad-05.png", "alt": "Stacklane ad: safe Friday deploys" },
-    { "image": "/assets/ads/ad-06.png", "alt": "Brightloop ad: 2026 Hiring Benchmark download" },
-    { "image": "/assets/ads/ad-07.png", "alt": "Nordvault ad: zero trust webinar" },
-    { "image": "/assets/ads/ad-08.png", "alt": "Fieldwork ad: before and after snag lists" },
-    { "image": "/assets/ads/ad-09.png", "alt": "Curio ad: 52% more online renewals" },
-    { "image": "/assets/ads/ad-10.png", "alt": "Stacklane ad: 5 signs your CI is slowing you down" }
+    {
+      "image": "/assets/ads/commuty-parking.jpg",
+      "alt": "Commuty ad: 440 people parking versus 130 parking spaces, with a link to the case study"
+    },
+    {
+      "image": "/assets/ads/futureproofed-ebook.jpg",
+      "alt": "Ebook ad: an expert quote on sustainability with a hand holding the guide on Scope 3 emissions"
+    },
+    {
+      "image": "/assets/ads/robaws-alles-op-een-plek.jpg",
+      "alt": "Robaws ad: Alles op één plaats, altijd en overal, over app screens"
+    },
+    {
+      "image": "/assets/ads/robaws-excel-error.jpg",
+      "alt": "Robaws ad: a stack of Excel error windows, with the line Met een ERP vind je alles met één klik"
+    },
+    {
+      "image": "/assets/ads/peple-nieuwe-bv.jpg",
+      "alt": "Peple ad: Nieuwe BV erbij? Nieuwe administratie erbij, showing several companies in one administration"
+    },
+    {
+      "image": "/assets/ads/teamleader-focus.jpg",
+      "alt": "Teamleader ad: Focus op de juiste taken, comparing a busy day without and with Teamleader"
+    },
+    {
+      "image": "/assets/ads/robaws-klantquote.jpg",
+      "alt": "Robaws customer ad: two customers holding a gift basket, with their quote about having everything in one place"
+    },
+    {
+      "image": "/assets/ads/robaws-zonder-met.jpg",
+      "alt": "Robaws ad: Administratief werk, a stressed builder without Robaws next to a relaxed one with it"
+    }
   ]
 }

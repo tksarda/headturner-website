@@ -14,7 +14,7 @@ The page, in order. Hidden sections are not in the published page at all.
 | 6 | Work with me: Strategist and Done for you | Shown | src/data/plans.json |  |
 | 7 | Results (cards, ads, pipeline) | Shown | src/components/Results.astro |  |
 |  | ↳ Results: 3 result cards | **Hidden** (placeholder) | src/data/results.json (cards) | Real results with numbers |
-|  | ↳ Results: ads carousel | **Hidden** (placeholder) | src/data/ads.json | 6 to 8 real, anonymised ads (576 x 720 px) |
+|  | ↳ Results: ads carousel | Shown | src/data/ads.json |  |
 |  | ↳ Results: pipeline report | **Hidden** (placeholder) | src/data/results.json (pipeline), public/assets/pipeline-report.png | A blurred ZenABM or Fibbler report screenshot |
 | 8 | Testimonials | **Hidden** (placeholder) | src/data/testimonials.json | Real quotes with name, role, company, photo and permission to publish |
 | 9 | Upcoming event | Shown | src/data/event.json |  |
@@ -25,4 +25,4 @@ The page, in order. Hidden sections are not in the published page at all.
 |  | ↳ Final call to action: Playbook card | **Hidden** (placeholder) | src/components/Ctas.astro | The playbook PDF and a working email sign-up form |
 | 14 | FAQ (9 questions) | Shown | src/data/faq.json | Replace [X weeks] in the first answer |
 
-13 shown, 5 hidden.
+14 shown, 4 hidden.

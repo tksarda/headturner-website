@@ -1,7 +1,7 @@
 ---
 import { url } from '../lib/url';
 // Results, ads carousel and pipeline report. Each part shows only when it is switched on in src/data/sections.json,
-// and the whole section disappears when all three are hidden (they hold placeholder content for now).
+// and the whole section disappears when all three are hidden.
 import { isShown } from '../lib/sections';
 import results from '../data/results.json';
 import ads from '../data/ads.json';
@@ -40,7 +40,7 @@ const showPipeline = isShown('pipeline');
           <div class="gallery" data-carousel-track tabindex="0" role="region" aria-label="Ads gallery">
             {ads.items.map((ad, i) => (
               <div class="image-slot gallery__item" role="group" aria-label={`Ad ${i + 1} of ${ads.items.length}`}>
-                <img src={url(ad.image)} width="576" height="720" alt={ad.alt} loading="lazy" />
+                <img src={url(ad.image)} width="720" height="720" alt={ad.alt} loading="lazy" />
               </div>
             ))}
           </div>

@@ -293,7 +293,7 @@ input { font: inherit; }
   overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none;
 }
 .gallery::-webkit-scrollbar { display: none; }
-.gallery__item { width: 288px; height: 360px; flex-shrink: 0; scroll-snap-align: start; overflow: hidden; }
+.gallery__item { width: 360px; height: 360px; flex-shrink: 0; scroll-snap-align: start; overflow: hidden; }
 /* Ads fill the frame exactly; the frame keeps its radius and size */
 .gallery__item img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
 .carousel__controls { display: flex; align-items: center; justify-content: center; gap: 16px; }
@@ -591,7 +591,7 @@ input { font: inherit; }
   .plan, .fit__card { border-radius: var(--radius-lg); }
   .fit__card { padding: 32px 24px; }
 
-  .gallery__item { width: 248px; height: 310px; }
+  .gallery__item { width: 310px; height: 310px; }
   .carousel { gap: 24px; }
   .pipeline__text { gap: 20px; }
 

@@ -9,7 +9,7 @@
     { "key": "plans", "name": "Work with me: Strategist and Done for you", "type": "section", "show": true, "content": "src/data/plans.json" },
     { "key": "results", "name": "Results (cards, ads, pipeline)", "type": "section", "show": true, "content": "src/components/Results.astro", "note": "Disappears on its own when all three parts below are hidden" },
     { "key": "resultsCards", "name": "Results: 3 result cards", "type": "part", "parent": "results", "show": false, "placeholder": true, "content": "src/data/results.json (cards)", "needs": "Real results with numbers" },
-    { "key": "ads", "name": "Results: ads carousel", "type": "part", "parent": "results", "show": false, "placeholder": true, "content": "src/data/ads.json", "needs": "6 to 8 real, anonymised ads (576 x 720 px)" },
+    { "key": "ads", "name": "Results: ads carousel", "type": "part", "parent": "results", "show": true, "content": "src/data/ads.json" },
     { "key": "pipeline", "name": "Results: pipeline report", "type": "part", "parent": "results", "show": false, "placeholder": true, "content": "src/data/results.json (pipeline), public/assets/pipeline-report.png", "needs": "A blurred ZenABM or Fibbler report screenshot" },
     { "key": "testimonials", "name": "Testimonials", "type": "section", "show": false, "placeholder": true, "content": "src/data/testimonials.json", "needs": "Real quotes with name, role, company, photo and permission to publish" },
     { "key": "event", "name": "Upcoming event", "type": "section", "show": true, "content": "src/data/event.json", "note": "Hides itself the day after the event" },
