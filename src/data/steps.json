@@ -1,0 +1,5 @@
+[
+  { "title": "1. Investigate", "icon": "/assets/icon-investigate.svg", "text": "I dig into your ad account, tracking, CRM, positioning and sales conversations. Which accounts matter? What are they seeing today? Where is budget leaking?" },
+  { "title": "2. Improve", "icon": "/assets/icon-improve.svg", "text": "Before anything new, I fix the foundations: targeting, account lists, tracking, campaign structure and the ads already running. This alone often frees up budget and sharpens results." },
+  { "title": "3. Ideate & create", "icon": "/assets/icon-create.svg", "text": "With solid foundations, we build what’s new: fresh angles, company and thought-leader ads, structured creative tests. Then we keep what works, cut what doesn’t, and scale into pipeline." }
+]

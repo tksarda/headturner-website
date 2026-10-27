@@ -1,0 +1,23 @@
+{
+  "_help": "Logo strips. Each item has a name and an optional icon. To be confirmed with Thilak, with official logo files.",
+  "clients": {
+    "title": "Companies I’ve worked with",
+    "items": [
+      { "name": "Teamleader", "icon": "/assets/logos/teamleader.svg" },
+      { "name": "Visma" },
+      { "name": "Peple" }
+    ]
+  },
+  "tools": {
+    "title": "Tools & partners I work with",
+    "items": [
+      { "name": "LinkedIn", "icon": "/assets/logos/linkedin.svg" },
+      { "name": "Meta", "icon": "/assets/logos/meta.svg" },
+      { "name": "Google Ads", "icon": "/assets/logos/googleads.svg" },
+      { "name": "Fibbler" },
+      { "name": "ZenABM" },
+      { "name": "HubSpot", "icon": "/assets/logos/hubspot.svg" },
+      { "name": "Salesforce", "icon": "/assets/logos/salesforce.svg" }
+    ]
+  }
+}

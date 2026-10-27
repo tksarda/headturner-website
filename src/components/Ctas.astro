@@ -1,0 +1,61 @@
+---
+// The final call to action, plus the Playbook card that stacks over it on scroll.
+// The Playbook card shows only when show.playbook is true in src/data/site.json
+// (the playbook doesn't exist yet and the sign-up form isn't connected).
+import site from '../data/site.json';
+import TalkButton from './TalkButton.astro';
+
+const showPlaybook = site.show.playbook;
+// Until a booking link is set, the final button opens Thilak's LinkedIn so it never goes nowhere
+const finalHref = site.bookingUrl || site.linkedinUrl;
+---
+
+<section class="ctas" id="contact">
+  <div class:list={['stack', { 'stack--single': !showPlaybook }]} data-stack-inner>
+    <div class="stack-slot">
+      <article class="stack-card cta-card" data-stack-card style="--i:0">
+        <div class="cta-card__heading">
+          <img src="/assets/logo-ink.svg" width="157" height="18" alt="Headturner" />
+          <h2 class="cta-card__title">Want the right people to <br /><span class="t-coral">know you</span> before they need you?</h2>
+        </div>
+        <p class="cta-card__body">Let’s have a 30-minute chat. I’ll look at your current setup and tell you honestly whether paid ads make sense for you right now, and on which channels.</p>
+        <TalkButton href={finalHref} />
+        <img class="cta-card__shape cta-card__shape--low" src="/assets/cta-shape.svg" width="339" height="339" alt="" aria-hidden="true" />
+        <img class="cta-card__shape cta-card__shape--high" src="/assets/cta-shape.svg" width="339" height="339" alt="" aria-hidden="true" />
+      </article>
+    </div>
+
+    {showPlaybook && (
+      <div class="stack-slot">
+        <article class="stack-card playbook-card" data-stack-card style="--i:1">
+          <div class="playbook-card__heading">
+            <span class="pill pill--pink-outline">FREE PLAYBOOK</span>
+            <h2 class="playbook-card__title">Steal my <span class="t-pink-dark">Thought Leader <br />Ads Playbook</span></h2>
+          </div>
+          <p class="playbook-card__body">How B2B SaaS teams turn their founders’ and experts’ posts into ads that build influence with the exact accounts they want to win.</p>
+          <form class="signup" onsubmit="return false">
+            <label class="signup__field">
+              <span class="visually-hidden">Work email</span>
+              <input type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+              <button class="btn btn--ink" type="submit">Receive guide <img src="/assets/arrow-white-sm.svg" width="16" height="16" alt="" /></button>
+            </label>
+            <p class="signup__alt">Rather have it done for you? <a href={site.bookingUrl || '#contact'}>Lets talk</a></p>
+          </form>
+          <img class="playbook-card__shape" src="/assets/playbook-shape.svg" width="339" height="339" alt="" aria-hidden="true" />
+          <!-- Book: idle float + pointer-driven 3D tilt with a moving shadow and a glare masked to the book's shape -->
+          <div class="playbook-card__book" data-book>
+            <span class="book__shadow" aria-hidden="true"></span>
+            <div class="book__float">
+              <div class="book__tilt" data-book-tilt>
+                <div class="book__media" data-stack-media>
+                  <img src="/assets/book.png" width="649" height="1000" alt="Thought Leader Ads Playbook cover" />
+                  <span class="book__glare" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    )}
+  </div>
+</section>

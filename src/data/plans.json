@@ -1,0 +1,29 @@
+[
+  {
+    "tag": "STRATEGIST", "tagStyle": "coral", "icon": "/assets/icon-strategist.svg",
+    "title": "You have the makers. I bring the strategy.",
+    "intro": "For teams with in-house designers and copywriters who need a senior paid media brain steering the work.",
+    "items": [
+      "Full channel strategy: LinkedIn-led, with Meta and Google where they reach the same buyers",
+      "Audience and account targeting",
+      "Creative briefs for your designers and copywriters",
+      "Review rounds on every ad before it goes live",
+      "Monthly check-ins on performance and next moves",
+      "Alignment with sales so leads get followed up properly"
+    ],
+    "note": "Your team creates the design and copy. I make sure it’s the right design and copy."
+  },
+  {
+    "tag": "DONE FOR YOU", "tagStyle": "pink", "icon": "/assets/icon-done-for-you.svg",
+    "title": "I run it. You see the results.",
+    "intro": "For lean teams who want their paid media handled end to end.",
+    "items": [
+      "Everything in Strategist",
+      "Campaign setup and day-to-day management across LinkedIn, Meta and Google",
+      "Ad design and copy, made for you",
+      "Thought-leader ad amplification",
+      "Pipeline influence tracking with Fibbler or ZenABM, so you can show leadership what your ads really drive",
+      "Weekly or bi-weekly reporting, your choice"
+    ]
+  }
+]

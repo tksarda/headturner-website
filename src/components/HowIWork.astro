@@ -1,0 +1,26 @@
+---
+import steps from '../data/steps.json';
+---
+
+<section class="inset" id="how-it-works">
+  <div class="inset__panel how">
+    <img class="how__decor how__decor--tl" src="/assets/decor-shape-tl.svg" width="288" height="288" alt="" aria-hidden="true" />
+    <img class="how__decor how__decor--br" src="/assets/decor-shape-br.svg" width="288" height="288" alt="" aria-hidden="true" />
+    <header class="section-header section-header--wide">
+      <span class="pill pill--pink">HOW I WORK</span>
+      <h2 class="display-m">Fix what’s there before building what’s new.</h2>
+      <p class="body-l t-muted how__intro">Most agencies start by launching new campaigns. I start by understanding what you already have, because the fastest wins are usually hiding in your current setup.</p>
+    </header>
+    <div class="steps">
+      {steps.map((s) => (
+        <article class="step">
+          <span class="icon-tile icon-tile--surface"><img src={s.icon} width="24" height="24" alt="" /></span>
+          <div class="step__text">
+            <h3 class="heading-s">{s.title}</h3>
+            <p class="t-muted">{s.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import fit from '../data/fit.json';
+---
+
+<section class="section fit-section">
+  <h2 class="display-m">{fit.heading}</h2>
+  <div class="fit">
+    <div class="fit__card fit__card--good">
+      <h3 class="heading-s">{fit.good.title}</h3>
+      <ul class="checklist">
+        {fit.good.items.map((item) => <li><img src="/assets/check.svg" width="20" height="20" alt="" />{item}</li>)}
+      </ul>
+    </div>
+    <div class="fit__card fit__card--not">
+      <h3 class="heading-s">{fit.notFit.title}</h3>
+      <ul class="checklist">
+        {fit.notFit.items.map((item) => <li><img src="/assets/cross.svg" width="20" height="20" alt="" />{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

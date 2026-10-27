@@ -1,0 +1,9 @@
+{
+  "_help": "Upcoming event. Update the date (YYYY-MM-DD) and place: the date tile fills itself in, and the block hides itself the day after the event.",
+  "date": "2026-10-28",
+  "place": "Teamleader HQ, Ghent",
+  "title": "Paid Social Meetup. Did you sign up yet?",
+  "description": "The first Paid Social Benelux meetup: an evening for B2B marketers running LinkedIn and Meta ads to swap what’s working.",
+  "buttonLabel": "Save my spot",
+  "buttonUrl": "https://www.linkedin.com/in/thilaksarda/recent-activity/all/"
+}

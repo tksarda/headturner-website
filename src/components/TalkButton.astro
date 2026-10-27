@@ -1,0 +1,24 @@
+---
+// The "Let's talk" button used across the page. By default it scrolls to the final call to action;
+// once a booking link is set in src/data/site.json (bookingUrl), every button opens it instead.
+import site from '../data/site.json';
+
+interface Props {
+  variant?: 'ink' | 'light';
+  label?: string;
+  href?: string;
+  class?: string;
+}
+
+const { variant = 'ink', label = "Let's talk", href, class: className } = Astro.props;
+const dest = href ?? (site.bookingUrl || '#contact');
+const external = /^https?:/.test(dest);
+const arrow = variant === 'light' ? '/assets/arrow-ink.svg' : '/assets/arrow-white.svg';
+---
+
+<a
+  class:list={['btn', `btn--${variant}`, className]}
+  href={dest}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+>{label} <img src={arrow} width="18" height="18" alt="" />{external && <span class="visually-hidden"> (opens in a new tab)</span>}</a>

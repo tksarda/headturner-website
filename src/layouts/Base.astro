@@ -1,0 +1,38 @@
+---
+// Page shell: <head>, fonts, global styles. Every page uses this layout.
+import '../styles/global.css';
+import site from '../data/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = 'Headturner — LinkedIn ads for B2B SaaS & Tech',
+  description = 'At Headturner, I help B2B SaaS and tech companies turn LinkedIn into their strongest brand channel.',
+  noindex = site.noindex,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" href="/assets/mark-coral.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500&family=Funnel+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

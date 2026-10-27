@@ -56,7 +56,7 @@
   <div class="cover paper" id="paper"></div>
   <div class="cover design" id="design">
     <div class="top">
-      <img src="../logo-ink.svg" alt="Headturner">
+      <img src="../public/assets/logo-ink.svg" alt="Headturner">
       <span class="tag">PLAYBOOK</span>
     </div>
     <div class="grid" id="grid"></div>
@@ -71,7 +71,7 @@
   const grid = document.getElementById('grid');
   for (let i = 0; i < 25; i++) {
     const m = document.createElement('img');
-    m.src = i === 13 ? '../mark-coral.svg' : '../mark-muted.svg';
+    m.src = i === 13 ? '../public/assets/mark-coral.svg' : '../public/assets/mark-muted.svg';
     if (i === 13) m.className = 'is-coral';
     grid.appendChild(m);
   }

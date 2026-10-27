@@ -1,0 +1,19 @@
+---
+import problems from '../data/problems.json';
+---
+
+<section class="section problem">
+  <header class="section-header">
+    <span class="pill pill--coral">THE PROBLEM</span>
+    <h2 class="display-m">“We tried LinkedIn ads. They don’t work.”</h2>
+    <p class="body-l t-muted">I hear it every week. It’s almost never the channel. It’s how the channel is being run.</p>
+  </header>
+  <div class="tilt-grid">
+    {problems.map((p) => (
+      <article class="tilt-card tilt-card--coral" style={`--r:${p.tilt}`}>
+        <p class="body-l">“{p.quote}”</p>
+        <p class="t-muted">{p.text}</p>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import TalkButton from './TalkButton.astro';
+---
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" data-nav>
+  <a class="nav__logo" href="#top" aria-label="Headturner home">
+    <img src="/assets/logo-ink.svg" width="157" height="18" alt="Headturner" />
+  </a>
+  <nav class="nav__links" id="nav-links" aria-label="Main">
+    <a class="nav__link" href="#how-it-works">How I work</a>
+    <a class="nav__link" href="#pricing">Pricing</a>
+    <a class="nav__link" href="#about">About</a>
+    <a class="nav__link" href="#faq">FAQ</a>
+  </nav>
+  <div class="nav__actions">
+    <TalkButton />
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu" data-nav-toggle>
+      <span></span><span></span>
+    </button>
+  </div>
+</header>

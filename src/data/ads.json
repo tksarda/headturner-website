@@ -1,0 +1,15 @@
+{
+  "_help": "PLACEHOLDER ads: fictional brands (source: design-source/ads.html). Replace with real, anonymised ads (576 x 720 px, 4:5) before setting show.ads to true in site.json.",
+  "items": [
+    { "image": "/assets/ads/ad-01.png", "alt": "Brightloop ad: 38% faster time-to-hire" },
+    { "image": "/assets/ads/ad-02.png", "alt": "Nordvault thought-leader ad: founder quote on security" },
+    { "image": "/assets/ads/ad-03.png", "alt": "Fieldwork ad: digital site diary" },
+    { "image": "/assets/ads/ad-04.png", "alt": "Curio ad: museum ticketing" },
+    { "image": "/assets/ads/ad-05.png", "alt": "Stacklane ad: safe Friday deploys" },
+    { "image": "/assets/ads/ad-06.png", "alt": "Brightloop ad: 2026 Hiring Benchmark download" },
+    { "image": "/assets/ads/ad-07.png", "alt": "Nordvault ad: zero trust webinar" },
+    { "image": "/assets/ads/ad-08.png", "alt": "Fieldwork ad: before and after snag lists" },
+    { "image": "/assets/ads/ad-09.png", "alt": "Curio ad: 52% more online renewals" },
+    { "image": "/assets/ads/ad-10.png", "alt": "Stacklane ad: 5 signs your CI is slowing you down" }
+  ]
+}

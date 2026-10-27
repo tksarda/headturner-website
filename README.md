@@ -1,25 +1,52 @@
-# Headturner website: draft preview
+# Headturner website
 
-Single-page site for [Headturner](https://www.linkedin.com/in/thilaksarda/), built by Otto from the Figma design.
+Single-page site for [Headturner](https://www.linkedin.com/in/thilaksarda/), built from the Figma design with [Astro](https://astro.build) and published to GitHub Pages at headturner.io.
 
-**This is a draft for review, not the live site.** Some content is placeholder and must be replaced before launch:
+**Status: pre-launch.** The site is set to `noindex`, and these sections are hidden until real content exists (flags in `src/data/site.json`):
 
-- Testimonials: fictional quotes, people and AI-generated portraits
-- Results cards and hero proof point: dummy numbers
-- "Ads I've made": fictional ads (source: `assets/source/ads.html`)
-- Pipeline report: illustrative mockup (source: `assets/source/pipeline-report.html`)
-- Logo strips: to be confirmed, with official logo files
-- Privacy page: draft, needs company details and review
-- Links: booking link and meetup sign-up URL still to come
+- Testimonials, results cards, ads carousel and pipeline report (placeholder content)
+- The hero's third proof point (a result)
+- The Playbook card (the playbook and its sign-up form don't exist yet)
 
-## Run locally
+## Run it locally
 
 ```sh
-python3 -m http.server 8765
+npm install
+npm run dev      # preview at http://localhost:4321
+npm run build    # outputs the site to dist/
 ```
 
-Then open http://localhost:8765.
+Needs Node 22.23 or newer.
 
-## Update the upcoming event
+## Where things live
 
-In `index.html`, change `data-event-date` (YYYY-MM-DD) and `data-event-place` on the event section. The date tile fills itself in, and the block hides the day after the event.
+| Folder | What's in it |
+|---|---|
+| `src/data/` | All editable content: text, lists, links, and the on/off flags (`site.json`) |
+| `src/components/` | One component per section of the page |
+| `src/styles/global.css` | All styles and design tokens |
+| `src/scripts/main.js` | All interactions |
+| `public/assets/` | Images and icons |
+| `design-source/` | HTML sources for generated images (ads, pipeline report, book cover). Not published |
+
+See `CLAUDE.md` for the design rules to follow when editing, with Claude or by hand.
+
+## Publishing
+
+Every push to `main` builds the site and publishes it through GitHub Actions (`.github/workflows/deploy.yml`).
+
+One-time setup in the GitHub repository:
+
+1. **Settings, Pages, Source:** choose **GitHub Actions**.
+2. **Settings, Pages, Custom domain:** `headturner.io`, then tick **Enforce HTTPS** once it's available.
+3. At the domain provider (Porkbun), the root and `www` DNS records point to `<github-username>.github.io`.
+
+## Before launch
+
+- [ ] Replace the placeholder content and switch the matching flags on in `src/data/site.json`
+- [ ] Set `noindex` to `false` in `src/data/site.json`
+- [ ] Booking link (`bookingUrl` in `src/data/site.json`) and the meetup sign-up link (`src/data/event.json`)
+- [ ] FAQ: replace "[X weeks]" in the first answer (`src/data/faq.json`)
+- [ ] Final logo lists, with logo files (`src/data/logos.json`)
+- [ ] Privacy page: company details, address, VAT number and contact email (`src/pages/privacy.astro`)
+- [ ] The playbook PDF and a working sign-up form, then switch on the Playbook card

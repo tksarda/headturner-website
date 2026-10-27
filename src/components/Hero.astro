@@ -1,0 +1,74 @@
+---
+import site from '../data/site.json';
+import proof from '../data/proof.json';
+import results from '../data/results.json';
+import TalkButton from './TalkButton.astro';
+
+// Proof points under the hero. The third (a result) stays hidden until it has a real number.
+const points = [...proof, ...(site.show.heroResultProofPoint ? [results.heroProofPoint] : [])];
+// 6 x 3 grid of brand marks; the 11th is the coral one ("the one people look back at")
+const marks = Array.from({ length: 18 }, (_, i) => i === 10);
+---
+
+<section class="hero" id="top">
+  <div class="hero__card">
+    <div class="hero__columns">
+      <div class="hero__copy">
+        <div class="hero__headline-group">
+          <span class="pill pill--outline hero__eyebrow">Linkedin Ads for B2B SaaS &amp; Tech</span>
+          <h1 class="hero__title">LinkedIn ads that make the right people <span class="t-coral">know you</span> before they need you.</h1>
+          <p class="body-l t-muted">At Headturner, I help B2B SaaS and tech companies turn LinkedIn into their strongest brand channel. Your future buyers get to know you now, so when they’re ready, you’re the name they already trust.</p>
+        </div>
+        <div class="founder-card">
+          <div class="founder-card__avatar"><img src="/assets/thilak.png" alt="Thilak, founder of Headturner" /></div>
+          <div class="founder-card__content">
+            <div class="founder-card__intro">
+              <p class="founder-card__name">Hi I’m Thilak,</p>
+              <p>founder of Headturner. 7 years in B2B SaaS marketing. Working with a handful of teams at a time.</p>
+            </div>
+            <TalkButton label="Let’s talk" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="feed" data-hero-feed>
+          <div class="post post--skipped" data-hero-post>
+            <div class="post__header"><img src="/assets/avatar-placeholder.svg" width="32" height="32" alt="" /><div class="post__lines"><i style="width:110px"></i><i style="width:70px"></i></div></div>
+            <i class="bar" style="width:303px"></i><i class="bar" style="width:253px"></i>
+          </div>
+          <div class="post post--main" data-hero-post data-hero-main>
+            <div class="post__header">
+              <span class="post__brand"><img src="/assets/mark-blue-small.svg" width="16" height="16" alt="" /></span>
+              <div class="post__name"><b>Your company</b><span>Promoted</span></div>
+            </div>
+            <div class="post__creative">
+              <div class="mark-grid" data-mark-grid>
+                {marks.map((coral) => (coral
+                  ? <img src="/assets/mark-coral.svg" alt="" data-mark-coral />
+                  : <img src="/assets/mark-muted.svg" alt="" />))}
+              </div>
+              <p class="post__tagline" data-hero-tagline>The one people<br /><span class="t-coral">look back</span> at.</p>
+            </div>
+            <div class="post__reactions"><i></i><i></i><i></i></div>
+          </div>
+          <div class="post post--skipped" data-hero-post>
+            <div class="post__header"><img src="/assets/avatar-placeholder.svg" width="32" height="32" alt="" /><div class="post__lines"><i style="width:110px"></i><i style="width:70px"></i></div></div>
+            <i class="bar" style="width:303px"></i><i class="bar" style="width:253px"></i>
+          </div>
+          <span class="chip chip--seen" data-hero-chip><span><img src="/assets/icon-eye.svg" width="16" height="16" alt="" /></span></span>
+          <span class="chip chip--searched" data-hero-chip><span><img src="/assets/icon-search.svg" width="16" height="16" alt="" /></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-row" style={`--cols:${points.length}`}>
+      {points.map((p) => (
+        <div class="proof-point">
+          <p class="proof-point__title"><img src="/assets/check-blue.svg" width="24" height="24" alt="" />{p.title}</p>
+          <p class="t-muted">{p.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import faq from '../data/faq.json';
+import TalkButton from './TalkButton.astro';
+---
+
+<section class="faq-section" id="faq">
+  <div class="faq">
+    <div class="faq__intro">
+      <span class="pill pill--outline">FAQ</span>
+      <h2 class="display-m">What people ask <br />before we talk.</h2>
+      <p class="t-muted">Something else on your mind? Ask me directly.</p>
+      <TalkButton />
+    </div>
+    <div class="faq__list" data-faq>
+      {faq.map((item) => (
+        <div class="faq-item">
+          <h3><button class="faq-item__q" aria-expanded="false">{item.question}<img src="/assets/plus.svg" width="22" height="22" alt="" /></button></h3>
+          <div class="faq-item__a"><div><p>{item.answer}</p></div></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

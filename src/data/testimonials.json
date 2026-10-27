@@ -1,0 +1,9 @@
+{
+  "_help": "PLACEHOLDER: fictional quotes, people, companies and AI-generated portraits for design review only. Replace all three with real testimonials (with permission) before setting show.testimonials to true in site.json.",
+  "heading": "What clients say",
+  "items": [
+    { "quote": "Cost per demo dropped 41% in three months, and sales finally recognised the names coming in.", "name": "Sofie Martens", "role": "Head of Marketing, Brightloop", "photo": "/assets/testimonial-1.jpg" },
+    { "quote": "He fixed what we had before building anything new. Within 90 days LinkedIn influenced €310K of pipeline.", "name": "Pieter Claes", "role": "Founder & CEO, Nordvault", "photo": "/assets/testimonial-2.jpg" },
+    { "quote": "Our founder’s posts became our best ads. Branded search grew 2.4× in a single quarter.", "name": "Arjun Mehta", "role": "Head of Growth, Stacklane", "photo": "/assets/testimonial-3.jpg" }
+  ]
+}

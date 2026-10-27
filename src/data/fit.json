@@ -1,0 +1,14 @@
+{
+  "heading": "Is this a fit?",
+  "good": { "title": "👍 Good fit if you…", "items": [
+    "Are a B2B SaaS or tech company with proven product-market fit",
+    "Can invest at least €1,500 a month in LinkedIn ads",
+    "See LinkedIn as a place to build brand recall, not just a lead machine",
+    "Have people in your team with something to say"
+  ]},
+  "notFit": { "title": "👎 Probably not a fit if you…", "items": [
+    "Are still figuring out who your customer is",
+    "Need demos next week from a small test budget",
+    "Expect ads to fix a product or pricing problem"
+  ]}
+}
