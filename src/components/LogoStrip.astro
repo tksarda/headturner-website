@@ -1,18 +1,20 @@
 ---
 import { url } from '../lib/url';
-// A scrolling logo strip. The list is repeated once (hidden from screen readers) so the loop is seamless.
-interface Logo { name: string; icon?: string }
+// A scrolling logo strip. Each item shows its full logo file, or an optional icon next to its name. The list is repeated once (hidden from screen readers) so the loop is seamless.
+interface Logo { name: string; icon?: string; logo?: string; height?: number }
 interface Props { title: string; items: Logo[]; reverse?: boolean; ariaLabel: string }
 
 const { title, items, reverse = false, ariaLabel } = Astro.props;
+// Heights are given in pixels at desktop size; as em they shrink with the strip's text on mobile.
+const logoHeight = (i: Logo) => (i.height ? `height:${(i.height / 22).toFixed(3)}em` : undefined);
 ---
 
 <section class:list={['logos', { 'logos--partners': reverse }]} aria-label={ariaLabel}>
   <p class="logos__title heading-s">{title}</p>
   <div class="marquee" data-marquee data-marquee-reverse={reverse ? '' : undefined}>
     <ul class="marquee__track">
-      {items.map((i) => <li class="logo-lockup">{i.icon && <img src={url(i.icon)} alt="" />}{i.name}</li>)}
-      {items.map((i) => <li class="logo-lockup" aria-hidden="true">{i.icon && <img src={url(i.icon)} alt="" />}{i.name}</li>)}
+      {items.map((i) => <li class="logo-lockup">{i.logo ? <img class="logo-lockup__logo" src={url(i.logo)} alt={i.name} style={logoHeight(i)} /> : <>{i.icon && <img src={url(i.icon)} alt="" />}{i.name}</>}</li>)}
+      {items.map((i) => <li class="logo-lockup" aria-hidden="true">{i.logo ? <img class="logo-lockup__logo" src={url(i.logo)} alt="" style={logoHeight(i)} /> : <>{i.icon && <img src={url(i.icon)} alt="" />}{i.name}</>}</li>)}
     </ul>
   </div>
 </section>

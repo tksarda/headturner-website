@@ -221,6 +221,7 @@ input { font: inherit; }
   color: var(--ink); opacity: .55; white-space: nowrap;
 }
 .logo-lockup img { width: 24px; height: 24px; filter: grayscale(1) brightness(.35); }
+.logo-lockup img.logo-lockup__logo { width: auto; height: 1.27em; }
 @media (hover: hover) { .marquee:hover .marquee__track { animation-play-state: paused; } }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
