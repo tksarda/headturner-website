@@ -1,23 +1,79 @@
 {
-  "_help": "Logo strips. Each item has a name and an optional icon. To be confirmed with Thilak, with official logo files.",
+  "_help": "Logo strips. Each item has a name and either a full logo file (logo) or a small icon shown next to the name (icon). Items with neither show the name as text. A logo's optional height (in pixels, default 28) evens out logos that look bigger or smaller than the rest.",
   "clients": {
     "title": "Companies I’ve worked with",
     "items": [
-      { "name": "Teamleader", "icon": "/assets/logos/teamleader.svg" },
-      { "name": "Visma" },
-      { "name": "Peple" }
+      {
+        "name": "Peple",
+        "logo": "/assets/logos/peple.png",
+        "height": 40
+      },
+      {
+        "name": "Teamleader",
+        "logo": "/assets/logos/teamleader-logo.svg",
+        "height": 40
+      },
+      {
+        "name": "Commuty",
+        "logo": "/assets/logos/commuty.svg",
+        "height": 24
+      },
+      {
+        "name": "WUK",
+        "logo": "/assets/logos/wuk.svg",
+        "height": 22
+      },
+      {
+        "name": "Optisuite",
+        "logo": "/assets/logos/optisuite.svg",
+        "height": 26
+      },
+      {
+        "name": "Robaws",
+        "logo": "/assets/logos/robaws.png",
+        "height": 24
+      },
+      {
+        "name": "Q7Leader",
+        "logo": "/assets/logos/q7leader.svg",
+        "height": 26
+      },
+      {
+        "name": "Otto Creatives",
+        "logo": "/assets/logos/otto-creatives.svg",
+        "height": 24
+      }
     ]
   },
   "tools": {
     "title": "Tools & partners I work with",
     "items": [
-      { "name": "LinkedIn", "icon": "/assets/logos/linkedin.svg" },
-      { "name": "Meta", "icon": "/assets/logos/meta.svg" },
-      { "name": "Google Ads", "icon": "/assets/logos/googleads.svg" },
-      { "name": "Fibbler" },
-      { "name": "ZenABM" },
-      { "name": "HubSpot", "icon": "/assets/logos/hubspot.svg" },
-      { "name": "Salesforce", "icon": "/assets/logos/salesforce.svg" }
+      {
+        "name": "LinkedIn",
+        "icon": "/assets/logos/linkedin.svg"
+      },
+      {
+        "name": "Meta",
+        "icon": "/assets/logos/meta.svg"
+      },
+      {
+        "name": "Google Ads",
+        "icon": "/assets/logos/googleads.svg"
+      },
+      {
+        "name": "Fibbler"
+      },
+      {
+        "name": "ZenABM"
+      },
+      {
+        "name": "HubSpot",
+        "icon": "/assets/logos/hubspot.svg"
+      },
+      {
+        "name": "Salesforce",
+        "icon": "/assets/logos/salesforce.svg"
+      }
     ]
   }
 }

@@ -2,6 +2,6 @@
   "_help": "Site-wide settings. Change values only; keep the structure. Which sections are shown lives in sections.json.",
   "siteUrl": "https://headturner.io",
   "linkedinUrl": "https://www.linkedin.com/in/thilaksarda/",
-  "bookingUrl": "",
+  "bookingUrl": "https://calendly.com/tksarda/30min",
   "noindex": true
 }
