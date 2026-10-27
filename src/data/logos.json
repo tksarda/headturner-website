@@ -4,7 +4,9 @@
     "title": "Companies I’ve worked with",
     "items": [
       {
-        "name": "Peple"
+        "name": "Peple",
+        "logo": "/assets/logos/peple.png",
+        "height": 40
       },
       {
         "name": "Teamleader",
@@ -37,10 +39,9 @@
         "height": 26
       },
       {
-        "name": "Otto Creatives"
-      },
-      {
-        "name": "Visma"
+        "name": "Otto Creatives",
+        "logo": "/assets/logos/otto-creatives.svg",
+        "height": 24
       }
     ]
   },
