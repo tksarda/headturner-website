@@ -11,8 +11,8 @@ interface Props {
 }
 
 const {
-  title = 'Headturner — LinkedIn ads for B2B SaaS & Tech',
-  description = 'At Headturner, I help B2B SaaS and tech companies turn LinkedIn into their strongest brand channel.',
+  title = 'Headturner | Thilak Sarda, LinkedIn-focused B2B growth partner',
+  description = 'I help B2B SaaS companies grow their paid ads with LinkedIn at its core. Ex-Teamleader, 7 years running paid social in-house.',
   noindex = site.noindex,
 } = Astro.props;
 ---
@@ -24,6 +24,10 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href={url('/assets/mark-coral.svg')} type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
