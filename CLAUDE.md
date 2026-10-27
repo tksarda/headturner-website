@@ -18,6 +18,10 @@ The github.io preview shows every section (placeholders included); headturner.io
 
 Commands: `npm install`, `npm run dev` (preview at localhost:4321), `npm run build`, `npm run check` (type check: run it after code changes and fix any errors). Every push to `main` builds and publishes the site through GitHub Actions in about two minutes.
 
+## How to make changes
+
+Always make changes through a pull request with a clear, descriptive title. Never push directly to the main branch. Explain each change in plain, non-technical language.
+
 ## Common changes
 
 | To change | Edit |
