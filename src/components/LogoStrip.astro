@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 // A scrolling logo strip. The list is repeated once (hidden from screen readers) so the loop is seamless.
 interface Logo { name: string; icon?: string }
 interface Props { title: string; items: Logo[]; reverse?: boolean; ariaLabel: string }
@@ -10,8 +11,8 @@ const { title, items, reverse = false, ariaLabel } = Astro.props;
   <p class="logos__title heading-s">{title}</p>
   <div class="marquee" data-marquee data-marquee-reverse={reverse ? '' : undefined}>
     <ul class="marquee__track">
-      {items.map((i) => <li class="logo-lockup">{i.icon && <img src={i.icon} alt="" />}{i.name}</li>)}
-      {items.map((i) => <li class="logo-lockup" aria-hidden="true">{i.icon && <img src={i.icon} alt="" />}{i.name}</li>)}
+      {items.map((i) => <li class="logo-lockup">{i.icon && <img src={url(i.icon)} alt="" />}{i.name}</li>)}
+      {items.map((i) => <li class="logo-lockup" aria-hidden="true">{i.icon && <img src={url(i.icon)} alt="" />}{i.name}</li>)}
     </ul>
   </div>
 </section>

@@ -9,7 +9,7 @@ Single-page marketing site for Headturner (Thilak Sarda, LinkedIn ads for B2B Sa
 - `src/data/*.json`: all editable content (text, lists, links, on/off flags). **Most requests are a change to one of these files.**
 - `src/styles/global.css`: all styles and design tokens (`:root` at the top).
 - `src/scripts/main.js`: all interactions (smooth scroll, nav, carousel, event, card stack, tilt effects). Uses GSAP, Lenis and vanilla-tilt from CDN scripts in `index.astro`.
-- `public/assets/`: images and icons. Reference them as `/assets/...`.
+- `public/assets/`: images and icons. In data files write them as `/assets/...`. In components wrap every image and internal link in `url()` from `src/lib/url.ts`, e.g. `src={url('/assets/logo-ink.svg')}`, so the site also works on a `github.io/<repo>/` preview address, not only on headturner.io.
 - `design-source/`: HTML sources for generated images (ads, pipeline report, book cover). Not published.
 
 Commands: `npm install`, `npm run dev` (preview at localhost:4321), `npm run build`. Every push to `main` builds and publishes the site through GitHub Actions in about two minutes.

@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 // Shown only when show.testimonials is true in src/data/site.json (the current quotes are placeholders).
 import site from '../data/site.json';
 import testimonials from '../data/testimonials.json';
@@ -13,7 +14,7 @@ import testimonials from '../data/testimonials.json';
           <figure class="quote">
             <blockquote class="body-l">“{t.quote}”</blockquote>
             <figcaption class="person">
-              <span class="person__img"><img src={t.photo} alt="" /></span>
+              <span class="person__img"><img src={url(t.photo)} alt="" /></span>
               <span><b>{t.name}</b><span>{t.role}</span></span>
             </figcaption>
           </figure>

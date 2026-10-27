@@ -1,14 +1,15 @@
 ---
+import { url } from '../lib/url';
 import site from '../data/site.json';
 ---
 
 <footer class="footer">
   <div class="footer__left">
-    <img src="/assets/logo-white.svg" width="175" height="20" alt="Headturner" />
+    <img src={url('/assets/logo-white.svg')} width="175" height="20" alt="Headturner" />
     <span>© 2026 Headturner</span>
   </div>
   <nav class="footer__links" aria-label="Footer">
     <a href={site.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
-    <a href="/privacy/">Privacy</a>
+    <a href={url('/privacy/')}>Privacy</a>
   </nav>
 </footer>

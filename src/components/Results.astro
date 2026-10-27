@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 // Results, ads carousel and pipeline report. Each block shows only when its flag in src/data/site.json is true,
 // and the whole section disappears when all three are hidden (they hold placeholder content for now).
 import site from '../data/site.json';
@@ -37,7 +38,7 @@ const { results: showCards, ads: showAds, pipeline: showPipeline } = site.show;
           <div class="gallery" data-carousel-track tabindex="0" role="region" aria-label="Ads gallery">
             {ads.items.map((ad, i) => (
               <div class="image-slot gallery__item" role="group" aria-label={`Ad ${i + 1} of ${ads.items.length}`}>
-                <img src={ad.image} width="576" height="720" alt={ad.alt} loading="lazy" />
+                <img src={url(ad.image)} width="576" height="720" alt={ad.alt} loading="lazy" />
               </div>
             ))}
           </div>
@@ -64,7 +65,7 @@ const { results: showCards, ads: showAds, pipeline: showPipeline } = site.show;
           <h2 class="display-m">{results.pipelineHeading}</h2>
           <p class="body-l t-muted">{results.pipelineText}</p>
         </div>
-        <img class="pipeline__image" src={results.pipelineImage} width="1168" height="840" alt={results.pipelineAlt} loading="lazy" />
+        <img class="pipeline__image" src={url(results.pipelineImage)} width="1168" height="840" alt={results.pipelineAlt} loading="lazy" />
       </div>
     )}
   </section>

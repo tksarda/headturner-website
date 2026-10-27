@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 // DRAFT privacy notice: plain-language template. Confirm company details, the contact address and the tools
 // listed below with Thilak (and someone who handles legal) before launch.
 import Base from '../layouts/Base.astro';
@@ -7,8 +8,8 @@ import Footer from '../components/Footer.astro';
 
 <Base title="Privacy — Headturner" noindex>
   <header class="nav is-scrolled">
-    <a class="nav__logo" href="/" aria-label="Headturner home"><img src="/assets/logo-ink.svg" width="157" height="18" alt="Headturner" /></a>
-    <a class="btn btn--light" href="/"><span class="back-arrow"><img src="/assets/arrow-ink.svg" width="18" height="18" alt="" /></span> Back to site</a>
+    <a class="nav__logo" href={url('/')} aria-label="Headturner home"><img src={url('/assets/logo-ink.svg')} width="157" height="18" alt="Headturner" /></a>
+    <a class="btn btn--light" href={url('/')}><span class="back-arrow"><img src={url('/assets/arrow-ink.svg')} width="18" height="18" alt="" /></span> Back to site</a>
   </header>
 
   <main class="legal">

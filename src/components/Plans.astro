@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 import plans from '../data/plans.json';
 import TalkButton from './TalkButton.astro';
 ---
@@ -12,7 +13,7 @@ import TalkButton from './TalkButton.astro';
     {plans.map((plan) => (
       <article class="plan">
         <div class="plan__header">
-          <span class={`plan-tag plan-tag--${plan.tagStyle}`}><span><img src={plan.icon} width="20" height="20" alt="" /></span>{plan.tag}</span>
+          <span class={`plan-tag plan-tag--${plan.tagStyle}`}><span><img src={url(plan.icon)} width="20" height="20" alt="" /></span>{plan.tag}</span>
           <div class="plan__intro">
             <h3 class="heading-s">{plan.title}</h3>
             <p>{plan.intro}</p>
@@ -21,7 +22,7 @@ import TalkButton from './TalkButton.astro';
         </div>
         <div class="plan__list">
           <ul class="checklist">
-            {plan.items.map((item) => <li><img src="/assets/check.svg" width="20" height="20" alt="" />{item}</li>)}
+            {plan.items.map((item) => <li><img src={url('/assets/check.svg')} width="20" height="20" alt="" />{item}</li>)}
           </ul>
           {plan.note && <p class="t-muted">{plan.note}</p>}
         </div>

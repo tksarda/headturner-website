@@ -35,6 +35,8 @@ See `CLAUDE.md` for the design rules to follow when editing, with Claude or by h
 
 Every push to `main` builds the site and publishes it through GitHub Actions (`.github/workflows/deploy.yml`).
 
+Until a custom domain is set, the site is published at `https://<github-username>.github.io/headturner-website/`. The workflow reads the address from the Pages settings, so the same code works there and on headturner.io.
+
 One-time setup in the GitHub repository:
 
 1. **Settings, Pages, Source:** choose **GitHub Actions**.

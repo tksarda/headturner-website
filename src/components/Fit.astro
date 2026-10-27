@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 import fit from '../data/fit.json';
 ---
 
@@ -8,13 +9,13 @@ import fit from '../data/fit.json';
     <div class="fit__card fit__card--good">
       <h3 class="heading-s">{fit.good.title}</h3>
       <ul class="checklist">
-        {fit.good.items.map((item) => <li><img src="/assets/check.svg" width="20" height="20" alt="" />{item}</li>)}
+        {fit.good.items.map((item) => <li><img src={url('/assets/check.svg')} width="20" height="20" alt="" />{item}</li>)}
       </ul>
     </div>
     <div class="fit__card fit__card--not">
       <h3 class="heading-s">{fit.notFit.title}</h3>
       <ul class="checklist">
-        {fit.notFit.items.map((item) => <li><img src="/assets/cross.svg" width="20" height="20" alt="" />{item}</li>)}
+        {fit.notFit.items.map((item) => <li><img src={url('/assets/cross.svg')} width="20" height="20" alt="" />{item}</li>)}
       </ul>
     </div>
   </div>

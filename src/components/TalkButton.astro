@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 // The "Let's talk" button used across the page. By default it scrolls to the final call to action;
 // once a booking link is set in src/data/site.json (bookingUrl), every button opens it instead.
 import site from '../data/site.json';
@@ -21,4 +22,4 @@ const arrow = variant === 'light' ? '/assets/arrow-ink.svg' : '/assets/arrow-whi
   href={dest}
   target={external ? '_blank' : undefined}
   rel={external ? 'noopener noreferrer' : undefined}
->{label} <img src={arrow} width="18" height="18" alt="" />{external && <span class="visually-hidden"> (opens in a new tab)</span>}</a>
+>{label} <img src={url(arrow)} width="18" height="18" alt="" />{external && <span class="visually-hidden"> (opens in a new tab)</span>}</a>

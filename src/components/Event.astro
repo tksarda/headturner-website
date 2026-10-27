@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/url';
 // Upcoming event. Edit src/data/event.json: the date tile and the "date, place" line fill themselves in,
 // and the block hides itself the day after the event (see the event script in src/scripts/main.js).
 import event from '../data/event.json';
@@ -23,7 +24,7 @@ const external = /^https?:/.test(event.buttonUrl);
         <h2 class="heading-s">{event.title}</h2>
         <p class="t-muted">{event.description} <span data-event-when>{when}</span>.</p>
       </div>
-      <a class="btn btn--ink" href={event.buttonUrl} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>{event.buttonLabel} <img src="/assets/arrow-white.svg" width="18" height="18" alt="" />{external && <span class="visually-hidden"> (opens in a new tab)</span>}</a>
+      <a class="btn btn--ink" href={event.buttonUrl} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>{event.buttonLabel} <img src={url('/assets/arrow-white.svg')} width="18" height="18" alt="" />{external && <span class="visually-hidden"> (opens in a new tab)</span>}</a>
     </div>
   </article>
 </section>
