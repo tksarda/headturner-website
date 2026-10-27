@@ -7,12 +7,11 @@ The page, in order. Hidden sections are not in the published page at all.
 | # | Section | Status | Edit it in | Still to do |
 |---|---|---|---|---|
 | 1 | Hero | Shown | src/components/Hero.astro, src/data/proof.json |  |
-|  | ↳ Hero: third proof point (a result) | **Hidden** (placeholder) | src/data/results.json (heroProofPoint) | A real result with one line of context |
 | 2 | Logo strip: companies I've worked with | Shown | src/data/logos.json (clients) | Confirm the list and add official logo files |
 | 3 | The problem (4 cards) | Shown | src/data/problems.json |  |
 | 4 | What I believe | Shown | src/components/Believe.astro |  |
 | 5 | How I work (3 steps) | Shown | src/data/steps.json |  |
-| 6 | Pricing: Strategist and Done for you | Shown | src/data/plans.json |  |
+| 6 | Work with me: Strategist and Done for you | Shown | src/data/plans.json |  |
 | 7 | Results (cards, ads, pipeline) | Shown | src/components/Results.astro |  |
 |  | ↳ Results: 3 result cards | **Hidden** (placeholder) | src/data/results.json (cards) | Real results with numbers |
 |  | ↳ Results: ads carousel | **Hidden** (placeholder) | src/data/ads.json | 6 to 8 real, anonymised ads (576 x 720 px) |
@@ -26,4 +25,4 @@ The page, in order. Hidden sections are not in the published page at all.
 |  | ↳ Final call to action: Playbook card | **Hidden** (placeholder) | src/components/Ctas.astro | The playbook PDF and a working email sign-up form |
 | 14 | FAQ (9 questions) | Shown | src/data/faq.json | Replace [X weeks] in the first answer |
 
-13 shown, 6 hidden.
+13 shown, 5 hidden.

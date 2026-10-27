@@ -1,29 +1,73 @@
 [
   {
-    "tag": "STRATEGIST", "tagStyle": "coral", "icon": "/assets/icon-strategist.svg",
-    "title": "You have the makers. I bring the strategy.",
-    "intro": "For teams with in-house designers and copywriters who need a senior paid media brain steering the work.",
+    "tag": "STRATEGIST",
+    "tagStyle": "coral",
+    "icon": "/assets/icon-strategist.svg",
+    "title": "You have the makers. I steer the performance.",
+    "intro": "For in-house teams that need a senior paid media partner to own the strategy, execution and optimisation, without adding another full-time hire.",
     "items": [
-      "Full channel strategy: LinkedIn-led, with Meta and Google where they reach the same buyers",
-      "Audience and account targeting",
-      "Creative briefs for your designers and copywriters",
-      "Review rounds on every ad before it goes live",
-      "Monthly check-ins on performance and next moves",
-      "Alignment with sales so leads get followed up properly"
+      {
+        "strong": "Full-funnel paid media strategy",
+        "text": " across LinkedIn, Meta and Google, focused on reaching the right B2B buyers."
+      },
+      {
+        "strong": "ICP and audience building",
+        "text": " to define, find and target your ideal customers across platforms."
+      },
+      {
+        "strong": "Campaign setup and execution",
+        "text": " from account structure and tracking to launch and ongoing management."
+      },
+      {
+        "strong": "Continuous optimisation",
+        "text": " of audiences, budgets, bidding and campaigns to improve performance over time."
+      },
+      {
+        "strong": "Performance dashboards and reporting",
+        "text": " that turn campaign data into clear insights and actionable next steps."
+      },
+      {
+        "strong": "Creative direction and ad reviews",
+        "text": " to brief your designers and copywriters, review assets before launch and identify what to test next."
+      },
+      {
+        "strong": "Sales alignment",
+        "text": " to connect campaign performance with lead quality, pipeline and follow-up."
+      },
+      {
+        "strong": "Pipeline influence tracking",
+        "text": " with Fibbler or ZenABM, so you can show leadership what your ads really drive."
+      }
     ],
-    "note": "Your team creates the design and copy. I make sure it’s the right design and copy."
+    "note": "Your team creates the assets. I own the paid media engine that turns them into results."
   },
   {
-    "tag": "DONE FOR YOU", "tagStyle": "pink", "icon": "/assets/icon-done-for-you.svg",
-    "title": "I run it. You see the results.",
-    "intro": "For lean teams who want their paid media handled end to end.",
+    "tag": "DONE FOR YOU",
+    "tagStyle": "pink",
+    "icon": "/assets/icon-done-for-you.svg",
+    "title": "You bring the ambition. I bring the whole package.",
+    "intro": "For B2B teams that want paid media handled end-to-end, from strategy and campaign management to creative production and continuous optimisation.",
     "items": [
-      "Everything in Strategist",
-      "Campaign setup and day-to-day management across LinkedIn, Meta and Google",
-      "Ad design and copy, made for you",
-      "Thought-leader ad amplification",
-      "Pipeline influence tracking with Fibbler or ZenABM, so you can show leadership what your ads really drive",
-      "Weekly or bi-weekly reporting, your choice"
+      {
+        "strong": "Everything in Strategist, plus:",
+        "text": ""
+      },
+      {
+        "strong": "Ad creative production:",
+        "text": " unlimited ad concepts, copy and creative variations to keep campaigns fresh and test what works."
+      },
+      {
+        "strong": "Thought leader content:",
+        "text": " LinkedIn thought leader posts that turn your founders and subject-matter experts into credible voices your buyers want to hear from."
+      },
+      {
+        "strong": "End-to-end creative execution:",
+        "text": " from messaging and hooks to ad copy, visual direction and finished campaign assets."
+      },
+      {
+        "strong": "Creative testing and iteration:",
+        "text": " continuously develop new angles, refresh creatives and scale what resonates with your audience."
+      }
     ]
   }
 ]
