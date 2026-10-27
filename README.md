@@ -12,7 +12,8 @@ Single-page site for [Headturner](https://www.linkedin.com/in/thilaksarda/), bui
 
 ```sh
 npm install
-npm run dev      # preview at http://localhost:4321
+npm run dev      # preview at http://localhost:4321 (follows the switches in sections.json)
+npm run dev:all  # same, with every section shown, placeholders included
 npm run build    # outputs the site to dist/
 npm run check    # type-checks the code; should report 0 errors
 npm run sections # prints which sections are shown or hidden, and updates SECTIONS.md
@@ -36,6 +37,8 @@ See `CLAUDE.md` for the design rules to follow when editing, with Claude or by h
 ## Publishing
 
 Every push to `main` builds the site and publishes it through GitHub Actions (`.github/workflows/deploy.yml`).
+
+**Preview versus live:** the preview address shows every section, placeholders included, so the whole design can be reviewed. A custom domain (headturner.io) follows the switches in `src/data/sections.json`, so the placeholders stay out of the live site. The workflow decides this from the Pages settings.
 
 Until a custom domain is set, the site is published at `https://<github-username>.github.io/headturner-website/`. The workflow reads the address from the Pages settings, so the same code works there and on headturner.io.
 

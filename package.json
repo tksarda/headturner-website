@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "sections": "node scripts/sections.mjs"
+    "sections": "node scripts/sections.mjs",
+    "dev:all": "PUBLIC_SHOW_ALL=true astro dev",
+    "build:all": "PUBLIC_SHOW_ALL=true astro build"
   },
   "dependencies": {
     "astro": "^7.4.2"

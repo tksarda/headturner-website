@@ -30,6 +30,8 @@ jobs:
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+          # The github.io preview shows every section, placeholders included. A custom domain follows sections.json.
+          PUBLIC_SHOW_ALL: ${{ steps.pages.outputs.base_path != '' }}
 
   deploy:
     needs: build

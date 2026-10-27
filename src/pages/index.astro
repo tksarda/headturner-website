@@ -19,7 +19,7 @@ import Fit from '../components/Fit.astro';
 import Ctas from '../components/Ctas.astro';
 import Faq from '../components/Faq.astro';
 import Footer from '../components/Footer.astro';
-import { pageSections } from '../lib/sections';
+import { pageSections, isShown } from '../lib/sections';
 
 // Which component draws which section key in sections.json
 const components: Record<string, any> = {
@@ -38,7 +38,7 @@ const components: Record<string, any> = {
   ctas: Ctas,
   faq: Faq,
 };
-const visible = pageSections.filter((s) => s.show && components[s.key]);
+const visible = pageSections.filter((s) => isShown(s.key) && components[s.key]);
 ---
 
 <Base>

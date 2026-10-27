@@ -14,6 +14,8 @@ Single-page marketing site for Headturner (Thilak Sarda, LinkedIn ads for B2B Sa
 
 After changing which sections are shown, run `npm run sections` and commit the updated `SECTIONS.md`.
 
+The github.io preview shows every section (placeholders included); headturner.io follows the switches in `sections.json`. `npm run dev:all` does the same locally.
+
 Commands: `npm install`, `npm run dev` (preview at localhost:4321), `npm run build`, `npm run check` (type check: run it after code changes and fix any errors). Every push to `main` builds and publishes the site through GitHub Actions in about two minutes.
 
 ## Common changes
